@@ -18,109 +18,185 @@ namespace calculator
             
             
         }
-        double num1;
-        double num2;
-        int flg = 0;//計算の上書き回避
-        String calc_flg;//四則演算判別フラグ
-        double result;//結果用
-        Boolean calc = false;//四則演算が打たれているか判定
+        double num1;//計算用
+        double num2;//計算用
         double work;//仮置き用
-        
-        
-        
-        
-       
+        double result;//結果用
+        String calc_flg = "+";//四則演算判別フラグ
+        Boolean flg = false;//計算の上書き回避
+        Boolean calc = false;//四則演算が打たれているか判定       
+        Boolean equ_flg = false;//=が連続で押されたかの判定(計算結果表示用)
+        Boolean calc_equ = false;//=が連続で押されたかの判定(計算式表示用)
+        Boolean new_val = false;//新しい計算式
+        Boolean clear_flg = false;//クリアボタンが押せるか判定
+        Boolean con_flg = false;//連続計算判定
+
+
+
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {//1ボタン
 
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "1";                
+                textresult.Text = "1";
+                
             }
             else
             {
                 textresult.Text += "1";               
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {//2ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "2";                
+                textresult.Text = "2";
+                
             }
             else
             {
                 textresult.Text += "2";                
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {//3ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "3";               
+                textresult.Text = "3";
+                
             }
             else
             {
                 textresult.Text += "3";                
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {//4ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "4";                
+                textresult.Text = "4";
+                
             }
             else
             {
                 textresult.Text += "4";               
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {//5ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "5";                
+                textresult.Text = "5";
+                
             }
             else
             {
                 textresult.Text += "5";               
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {//6ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "6";                
+                textresult.Text = "6";
+                
             }
             else
             {
                 textresult.Text += "6";                
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {//7ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "7";                
+                textresult.Text = "7";
+                
             }
 
             else
             {
                 textresult.Text += "7";                
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -128,47 +204,85 @@ namespace calculator
             if (textresult.Text == "0" || calc == true)
             {
                 textresult.Text = "8";
+                
             }
             else
             {
                 textresult.Text += "8";
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {//9ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "9";                
+                textresult.Text = "9";
+                
             }
             else
             {
                 textresult.Text += "9";                
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button0_Click(object sender, EventArgs e)
         {//0ボタン
             if (textresult.Text == "0" || calc == true)
             {
-                textresult.Text = "0";                
+                textresult.Text = "0";
+                
             }
             else
             {
                 textresult.Text += "0";
             }
+
+            if (new_val == true)
+            {
+                flg = false;
+                num1 = 0;
+                num2 = 0;
+                calc_textBox.Text = "";
+            }
             calc = false;
+            clear_flg = false;
         }
 
         private void button_equal_Click(object sender, EventArgs e)
         {//=ボタン
-            calc_textBox.Text += textresult.Text+"=";
-            if (flg == 1)
-            {
-                num2 = double.Parse(textresult.Text);
+
+            if (equ_flg == false)
+            {//=ボタンが四則演算をはさんで押されたとき(計算結果表示用)
+                if (flg == true)
+                {
+                    num2 = double.Parse(textresult.Text);
+                }
+                else
+                {
+                    num1 = double.Parse(textresult.Text);
+                }
             }
+            
             if (calc_flg == "+")//足し算
             {
                 result = num1 + num2;
@@ -177,7 +291,7 @@ namespace calculator
             {
                 result = num1 - num2;
             }
-            else if (calc_flg == "*")//掛け算
+            else if (calc_flg == "×")//掛け算
             {
                 result = num1 * num2;
             }
@@ -185,14 +299,34 @@ namespace calculator
             {
                 result = num1 / num2;
             }
-            num1 = result;
-            flg = 1;
-            textresult.Text = result.ToString();
-            
-            
-           
-            calc = true;
 
+            if (textresult.Text.EndsWith("."))
+            {//計算式が小数点で終わっているとき
+                textresult.Text = textresult.Text.Remove(textresult.Text.Length - 1, 1);
+            }
+
+            if (num2 == 0)
+            {
+                calc_textBox.Text = textresult.Text + "+0=";
+            }
+            else if (calc_equ == false)
+            {//=ボタンが四則演算をはさんで押されたとき(計算式表示用)
+                calc_textBox.Text += textresult.Text + "=";
+                calc_equ = true;
+            }
+            else if (calc_equ == true)
+            {//=ボタンが連続で押されたとき(計算式表示用)
+                calc_textBox.Text = textresult.Text + calc_flg + num2.ToString() + "=";
+            }
+
+            num1 = result;
+            flg = false;
+            textresult.Text = result.ToString();
+            equ_flg = true;
+            calc = true;
+            new_val = true;
+            clear_flg = true;
+            con_flg = false;
         }
 
         private void button_product_Click(object sender, EventArgs e)
@@ -201,19 +335,51 @@ namespace calculator
             {
                 //連続で押された時の回避用
             }
-            else if (flg == 0)
+            else if (flg == false)
             {
                 num1 = double.Parse(textresult.Text);                
-                flg = 1;
+                flg = true;
             }
-            else if (flg == 1)
+            else if (flg == true)
             {
                 num2 = double.Parse(textresult.Text);                
-                flg = 0;
+                flg = false;
             }
-            calc_flg = "*";
+
+            if (con_flg == true)
+            {//連続計算
+                if (calc_flg == "+")//足し算
+                {
+                    result = num1 + num2;
+                }
+                else if (calc_flg == "-")//引き算
+                {
+                    result = num1 - num2;
+                }
+                else if (calc_flg == "×")//掛け算
+                {
+                    result = num1 * num2;
+                }
+                else if (calc_flg == "/")//割り算
+                {
+                    result = num1 / num2;
+                }
+                num1 = result;
+                flg = true;
+                textresult.Text = result.ToString();
+            }
+            if (textresult.Text.EndsWith("."))
+            {//計算式が小数点で終わっているとき
+                textresult.Text = textresult.Text.Remove(textresult.Text.Length - 1, 1);
+            }
+
+            calc_flg = "×";
             calc = true;
+            calc_equ = false;
             calc_textBox.Text = textresult.Text + "×";
+            new_val = false;
+            equ_flg = false;
+            con_flg = true;
 
         }
 
@@ -223,21 +389,52 @@ namespace calculator
             {
                 //連続で押された時の回避用
             }
-            else if (flg == 0)
+            else if (flg == false)
             {
                 num1 = double.Parse(textresult.Text);                
-                flg = 1;
+                flg = true;
             }
-            else if(flg==1)
+            else if(flg==true)
             {
                 num2 = double.Parse(textresult.Text);                
-                flg = 0;
+                flg = false;
             }
+
+            if (con_flg == true)
+            {//連続計算
+                if (calc_flg == "+")//足し算
+                {
+                    result = num1 + num2;
+                }
+                else if (calc_flg == "-")//引き算
+                {
+                    result = num1 - num2;
+                }
+                else if (calc_flg == "×")//掛け算
+                {
+                    result = num1 * num2;
+                }
+                else if (calc_flg == "/")//割り算
+                {
+                    result = num1 / num2;
+                }
+                num1 = result;
+                flg = true;
+                textresult.Text = result.ToString();
+            }
+
+            if (textresult.Text.EndsWith("."))
+            {//計算式が小数点で終わっているとき
+                textresult.Text = textresult.Text.Remove(textresult.Text.Length - 1, 1);
+            }
+
             calc_flg = "+";
             calc = true;
+            calc_equ = false;
             calc_textBox.Text = textresult.Text + "+";
-
-
+            new_val = false;
+            equ_flg = false;
+            con_flg = true;
 
         }
 
@@ -247,20 +444,52 @@ namespace calculator
             {
                 //連続で押された時の回避用
             }
-            else if (flg == 0)
+            else if (flg == false)
             {
                 num1 = double.Parse(textresult.Text);                
-                flg = 1;
+                flg = true;
             }
-            else if (flg == 1)
+            else if (flg == true)
             {
                 num2 = double.Parse(textresult.Text);                
-                flg = 0;
+                flg = false;
             }
+
+            if (con_flg == true)
+            {//連続計算
+                if (calc_flg == "+")//足し算
+                {
+                    result = num1 + num2;
+                }
+                else if (calc_flg == "-")//引き算
+                {
+                    result = num1 - num2;
+                }
+                else if (calc_flg == "×")//掛け算
+                {
+                    result = num1 * num2;
+                }
+                else if (calc_flg == "/")//割り算
+                {
+                    result = num1 / num2;
+                }
+                num1 = result;
+                flg = true;
+                textresult.Text = result.ToString();
+            }
+
+            if (textresult.Text.EndsWith("."))
+            {//計算式が小数点で終わっているとき
+                textresult.Text = textresult.Text.Remove(textresult.Text.Length - 1, 1);
+            }
+
             calc_flg = "-";
             calc = true;
+            calc_equ = false;
             calc_textBox.Text = textresult.Text + "-";
-
+            new_val = false;
+            equ_flg = false;
+            con_flg = true;
         }
 
         private void button_quotient_Click(object sender, EventArgs e)
@@ -269,20 +498,52 @@ namespace calculator
             {
                 //連続で押された時の回避用
             }
-            else if (flg == 0)
+            else if (flg == false)
             {
                 num1 = double.Parse(textresult.Text);                
-                flg = 1;
+                flg = true;
             }
-            else if (flg == 1)
+            else if (flg == true)
             {
                 num2 = double.Parse(textresult.Text);                
-                flg = 0;
+                flg = false;
             }
+
+            if (con_flg == true)
+            {//連続計算
+                if (calc_flg == "+")//足し算
+                {
+                    result = num1 + num2;
+                }
+                else if (calc_flg == "-")//引き算
+                {
+                    result = num1 - num2;
+                }
+                else if (calc_flg == "×")//掛け算
+                {
+                    result = num1 * num2;
+                }
+                else if (calc_flg == "/")//割り算
+                {
+                    result = num1 / num2;
+                }
+                num1 = result;
+                flg = true;
+                textresult.Text = result.ToString();
+            }
+
+            if (textresult.Text.EndsWith("."))
+            {//計算式が小数点で終わっているとき
+                textresult.Text = textresult.Text.Remove(textresult.Text.Length - 1, 1);
+            }
+
             calc_flg = "/";
             calc = true;
+            calc_equ = false;
             calc_textBox.Text = textresult.Text + "÷";
-
+            new_val = false;
+            equ_flg = false;
+            con_flg = true;
         } 
 
         private void percent_button_Click(object sender, EventArgs e)
@@ -291,6 +552,7 @@ namespace calculator
             work /= 100;
             textresult.Text = work.ToString();
             calc_textBox.Text = textresult.Text;
+            calc_equ = false;
         }
 
         private void clear_button_Click(object sender, EventArgs e)
@@ -298,9 +560,15 @@ namespace calculator
             num1 = 0;
             num2 = 0;
             textresult.Text = "0";
-            calc_flg="";
+            calc_flg="+";
             calc_textBox.Text = "";
-           
+            work = 0;
+            calc_equ = false;
+            calc = false;
+            equ_flg = false;
+            flg = false;
+
+
         }
 
         private void point_button_Click(object sender, EventArgs e)
@@ -310,6 +578,7 @@ namespace calculator
                 textresult.Text += ".";
             }
             calc = false;
+            calc_equ = false;
         }
 
         private void plus_minus_Click(object sender, EventArgs e)
@@ -324,19 +593,26 @@ namespace calculator
                 textresult.Text = textresult.Text.Trim('-');
                 
             }
+            calc_equ = false;
         }
 
         private void back_button_Click(object sender, EventArgs e)
         {//1文字消す
-            calc_textBox.Text = "";
-            if (textresult.Text.Length == 1|| textresult.Text.Length==2&&textresult.Text.Contains("-"))
+            if (clear_flg == false)
             {
-                textresult.Text = "0";
+                {
+                    if (textresult.Text.Length == 1 || textresult.Text.Length == 2 && textresult.Text.Contains("-"))
+                    {
+                        textresult.Text = "0";
+                    }
+                    else
+                    {
+                        textresult.Text = textresult.Text.Remove(textresult.Text.Length - 1, 1);
+                    }
+                }
+                
             }
-            else
-            {
-                textresult.Text = textresult.Text.Remove(textresult.Text.Length - 1, 1);
-            }
+            calc_equ = false;
         }
 
         private void pow_button_Click(object sender, EventArgs e)
@@ -344,6 +620,7 @@ namespace calculator
             work = double.Parse(textresult.Text);
             work = Math.Pow(work, 2);
             textresult.Text = work.ToString();
+            calc_equ = false;
         }
 
         private void fraction_button_Click(object sender, EventArgs e)
@@ -352,7 +629,8 @@ namespace calculator
             work = 1/work;
             calc_textBox.Text ="1/"+ textresult.Text;
             textresult.Text = work.ToString();
-            
+            calc_equ = false;
+
         }
 
         private void root_button_Click(object sender, EventArgs e)
@@ -361,6 +639,12 @@ namespace calculator
             work = Math.Sqrt(work);
             calc_textBox.Text = "√" + textresult.Text;
             textresult.Text = work.ToString();
+            calc_equ = false;
+        }
+
+        private void clear_entry_Click(object sender, EventArgs e)
+        {//クリアエントリーボタン
+            textresult.Text = "0";
         }
     }
 }

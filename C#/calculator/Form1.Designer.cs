@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.textresult = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             this.pow_button = new System.Windows.Forms.Button();
             this.root_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
+            this.clear_entry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -180,9 +182,9 @@
             // 
             this.button0.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button0.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.button0.Location = new System.Drawing.Point(0, 390);
+            this.button0.Location = new System.Drawing.Point(90, 390);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(180, 60);
+            this.button0.Size = new System.Drawing.Size(90, 60);
             this.button0.TabIndex = 0;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = false;
@@ -277,7 +279,7 @@
             // 
             this.percent_button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.percent_button.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.percent_button.Location = new System.Drawing.Point(180, 150);
+            this.percent_button.Location = new System.Drawing.Point(0, 90);
             this.percent_button.Name = "percent_button";
             this.percent_button.Size = new System.Drawing.Size(90, 60);
             this.percent_button.TabIndex = 3;
@@ -299,9 +301,9 @@
             // 
             // plus_minus
             // 
-            this.plus_minus.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.plus_minus.BackColor = System.Drawing.SystemColors.MenuBar;
             this.plus_minus.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.plus_minus.Location = new System.Drawing.Point(90, 150);
+            this.plus_minus.Location = new System.Drawing.Point(0, 390);
             this.plus_minus.Name = "plus_minus";
             this.plus_minus.Size = new System.Drawing.Size(90, 60);
             this.plus_minus.TabIndex = 0;
@@ -313,7 +315,7 @@
             // 
             this.fraction_button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.fraction_button.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.fraction_button.Location = new System.Drawing.Point(90, 90);
+            this.fraction_button.Location = new System.Drawing.Point(180, 150);
             this.fraction_button.Name = "fraction_button";
             this.fraction_button.Size = new System.Drawing.Size(90, 60);
             this.fraction_button.TabIndex = 0;
@@ -337,7 +339,7 @@
             // 
             this.root_button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.root_button.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.root_button.Location = new System.Drawing.Point(0, 90);
+            this.root_button.Location = new System.Drawing.Point(90, 150);
             this.root_button.Name = "root_button";
             this.root_button.Size = new System.Drawing.Size(90, 60);
             this.root_button.TabIndex = 0;
@@ -357,6 +359,19 @@
             this.back_button.UseVisualStyleBackColor = false;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
+            // clear_entry
+            // 
+            this.clear_entry.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.clear_entry.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.clear_entry.Location = new System.Drawing.Point(90, 90);
+            this.clear_entry.Name = "clear_entry";
+            this.clear_entry.Size = new System.Drawing.Size(90, 60);
+            this.clear_entry.TabIndex = 0;
+            this.clear_entry.Text = "CE";
+            this.clear_entry.UseVisualStyleBackColor = false;
+            this.clear_entry.UseWaitCursor = true;
+            this.clear_entry.Click += new System.EventHandler(this.clear_entry_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -374,6 +389,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.point_button);
             this.Controls.Add(this.plus_minus);
+            this.Controls.Add(this.clear_entry);
             this.Controls.Add(this.clear_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.root_button);
@@ -389,8 +405,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.percent_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "電卓";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,6 +441,7 @@
         private System.Windows.Forms.Button pow_button;
         private System.Windows.Forms.Button root_button;
         private System.Windows.Forms.Button back_button;
+        private System.Windows.Forms.Button clear_entry;
     }
 }
 
